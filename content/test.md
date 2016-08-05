@@ -5,4 +5,4 @@ Tags: python
 Author: Eric Carlson
 Summary: Introduction
 
-Data Science and DevOps
+Data Science and DevOps Intro
