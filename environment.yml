@@ -1,0 +1,7 @@
+# run: conda env create --file environment.yml
+name: ektar-pelican
+dependencies:
+- python>=3.5
+- anaconda
+- pip
+- flake8
