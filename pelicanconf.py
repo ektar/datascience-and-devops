@@ -30,11 +30,13 @@ LINKS = (
          ('Walking Randomly', 'http://www.walkingrandomly.com/'),
          ('Kaggle Blog', 'http://blog.kaggle.com/'),
          ('Wes McKinney', 'http://wesmckinney.com/'),
+         ('Google Datascience', 'http://www.unofficialgoogledatascience.com/'),
 )
 
 # Social widget
-SOCIAL = (('You can add links in your config file', '#'),
-          ('Another social link', '#'),)
+SOCIAL = (
+             ('LinkedIn', 'https://www.linkedin.com/in/erictcarlson'),
+         )
 
 DEFAULT_PAGINATION = False
 
