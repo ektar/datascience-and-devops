@@ -20,10 +20,17 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (
+         ('While My MCMC Gently Samples', 'http://twiecki.github.io/'),
+         ('Pythonic Perambulations', 'https://jakevdp.github.io/'),
+         ('Normal Deviate', 'https://normaldeviate.wordpress.com/'),
+         ('Statistical Modeling, Causal Inference, and Social Science', 'http://andrewgelman.com/'),
+         ('Edwin Chan', 'http://blog.echen.me/'),
+         ('Hunch', 'http://hunch.net/'),
+         ('Walking Randomly', 'http://www.walkingrandomly.com/'),
+         ('Kaggle Blog', 'http://blog.kaggle.com/'),
+         ('Wes McKinney', 'http://wesmckinney.com/'),
+)
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
