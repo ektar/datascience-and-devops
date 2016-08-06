@@ -1,7 +1,16 @@
 # run: conda env create --file environment.yml
 name: ektar-pelican
 dependencies:
-- python>=3.5
 - anaconda
-- pip
+- beautifulsoup4
 - flake8
+- ipython
+- ipython[notebook]
+- Markdown
+- matplotlib
+- nbconvert
+- numpy
+- pandas
+- pelican
+- pip
+- python>=3.5

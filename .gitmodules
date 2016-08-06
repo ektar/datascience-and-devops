@@ -1,3 +1,6 @@
 [submodule "output"]
 	path = output
 	url = https://github.com/ektar/ektar.github.io.git
+[submodule "themes/octopress"]
+	path = themes/octopress
+	url = https://github.com/jakevdp/pelican-octopress-theme.git
