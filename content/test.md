@@ -1,7 +1,7 @@
 Title: Data Science and DevOps
 Date: 2016-08-05 19:39
-Category: Python
-Tags: python
+Category: General
+Tags: general
 Author: Eric Carlson
 Summary: Introduction
 
