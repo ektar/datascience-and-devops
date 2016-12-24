@@ -4,3 +4,6 @@
 [submodule "themes/octopress"]
 	path = themes/octopress
 	url = https://github.com/jakevdp/pelican-octopress-theme.git
+[submodule "plugins/pelican-ipynb"]
+        path = plugins/pelican-ipynb
+        url = https://github.com/danielfrg/pelican-ipynb.git
