@@ -4,6 +4,7 @@ Category: General
 Tags: general
 Author: Eric Carlson
 slug: blog-intro
+Status: published
 Summary: Welcome to my blog - a summary of my explorations around Data Science and DevOps, and anything else that seems interesting to write on.
 
 After benefiting for years from great resources on math, programming, data science, etc., I thought it may be a good idea to start trying to return the favor.  One void I intend to contribute to is at the intersection of Data Science and DevOps.  
@@ -18,7 +19,6 @@ Hope you enjoy the explorations, and looking forward to comments!
 
 **About the author**
 
-Eric Carlson has a background in Electrical Engineering and Computer Science, starting from his Bachelor's Degree from the University of Michigan, where he was electronics team leader for the U of M Solar Car Team.  He attended Johns Hopkins University for graduate school, and received a PhD in Biomedical Engineering in 2011.  His thesis detailed the processing that occurs in the primate visual cortex, and demonstrated that an artificial neural network optimizing for sparseness results tuning properties similar to those he observed in area V4 of the anterior visual system.  Eric's post doctoral work in retinal prosthetics at Weill Cornell Medical School was featured in a Ted Talk in 2012.  In 2013 Eric joined the staff of Philips Research, where he is currently a Senior Scientist.  Eric work involves the creation of models predicting patient deterioration in and out of the hospital, and the creation of systems to collect, clean, and process patient data and score models in realtime.
+Eric has a background in Electrical Engineering and Computer Science, starting from his Bachelor's Degree from the University of Michigan, where he was electronics team leader for the U of M Solar Car Team.  He attended Johns Hopkins University for graduate school, and received a PhD in Biomedical Engineering in 2011.  His thesis detailed the processing that occurs in the primate visual cortex, and demonstrated that an artificial neural network optimizing for sparseness results tuning properties similar to those he observed in area V4 of the anterior visual system.  Eric's post doctoral work in retinal prosthetics at Weill Cornell Medical School was featured in a Ted Talk in 2012.  In 2013 Eric joined the staff of Philips Research, where he is currently a Senior Scientist.  Eric work involves the creation of models predicting patient deterioration in and out of the hospital, and the creation of systems to collect, clean, and process patient data and score models in realtime.
 
-
-{% notebook test_notebook.ipynb %}
+[Resume]({attach}/downloads/carlson-resume-161223.pdf)

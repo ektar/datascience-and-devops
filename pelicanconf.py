@@ -8,6 +8,9 @@ SITENAME = 'Data Science and DevOps'
 SITEURL = ''
 
 PATH = 'content'
+STATIC_PATHS = ['downloads', 'images']
+ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
+ARTICLE_URL = '{date:%Y}/{slug}.html'
 
 TIMEZONE = 'America/New_York'
 
@@ -54,3 +57,7 @@ NOTEBOOK_DIR = 'notebooks'
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
 
 THEME = 'themes/octopress'
+
+DEFAULT_METADATA = {
+    'status': 'draft',
+}
