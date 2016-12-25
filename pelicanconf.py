@@ -5,7 +5,7 @@ import os
 
 AUTHOR = 'Eric T. Carlson'
 SITENAME = 'Data Science and DevOps'
-SITEURL = ''
+SITEURL = 'https://ektar.github.io'
 
 PATH = 'content'
 STATIC_PATHS = ['downloads', 'images']
@@ -56,8 +56,14 @@ NOTEBOOK_DIR = 'notebooks'
 
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
 
-THEME = 'themes/octopress'
-
 DEFAULT_METADATA = {
-    'status': 'draft',
+    'status': 'draft'
 }
+
+DISQUS_SITENAME = 'datascidevops'
+DISQUS_DISPLAY_COUNTS = True
+
+#THEME = 'themes/octopress'
+THEME = 'themes/pelican-bootstrap3'
+
+JINJA_EXTENSIONS = ['jinja2.ext.i18n']
