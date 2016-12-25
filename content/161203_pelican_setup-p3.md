@@ -5,7 +5,11 @@ Tags: python, website, github
 Author: Eric Carlson
 slug: pelican-website-p3
 Status: published
-Summary: Final Pelican configuration for Jupyter integration
+
+As a final step we'll configure Pelican to enable Jupyter notebook integration.  This will let us
+quickly copy in analysis .ipynb files and include math, markdown, and figures.  In further configuration
+we can even enable Pelican plugins for UML diagrams to add text-generated activity/state diagrams,
+or can add plugins for comments to interact with readers.
 
 Part 3 of 3:
 

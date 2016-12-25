@@ -5,7 +5,7 @@ import os
 
 AUTHOR = 'Eric T. Carlson'
 SITENAME = 'Data Science and DevOps'
-SITEURL = 'https://ektar.github.io'
+SITEURL = ''
 
 PATH = 'content'
 STATIC_PATHS = ['downloads', 'images']

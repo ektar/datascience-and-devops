@@ -5,12 +5,6 @@ Tags: python, website, github
 Author: Eric Carlson
 slug: pelican-website-p1
 Status: published
-Summary: Overview of how to setup the Pelican static website generator
-
-Part 1 of 3:
-
-* [Part 2]({filename}161202_pelican_setup-p2.md)
-* [Part 3]({filename}161203_pelican_setup-p3.md) 
 
 I've run various personal websites since the AOL era - first based on Microsoft's Front Page, then
 switching to hand-crafted HTML, which got tiresome.  I switched to PHP Gallery for managing my 
@@ -28,6 +22,11 @@ launch to many output platforms - GitHub, S3, personal hosting, etc.
 
 Below I'll go through the steps needed to create this website, and a few tests demonstrating 
 capabilities.
+
+Part 1 of 3:
+
+* [Part 2]({filename}161202_pelican_setup-p2.md)
+* [Part 3]({filename}161203_pelican_setup-p3.md) 
 
 ## Local environment
 

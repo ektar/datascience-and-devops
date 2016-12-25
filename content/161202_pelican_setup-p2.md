@@ -5,18 +5,15 @@ Tags: python, website, github
 Author: Eric Carlson
 slug: pelican-website-p2
 Status: published
-Summary: Launching our Pelican website on Github 
-
-Part 2 of 3:
-
-* [Part 1]({filename}161201_pelican_setup-p1.md)
-* [Part 3]({filename}161203_pelican_setup-p3.md) 
-
 
 GitHub hosting is a quick and easy way to get content up, and is great when you're already familiar
 with git and want to link to other content.  Basically, any content in the master branch of
 a specially named repo in your account (`<username>.github.io`) will be served as your website.
 
+Part 2 of 3:
+
+* [Part 1]({filename}161201_pelican_setup-p1.md)
+* [Part 3]({filename}161203_pelican_setup-p3.md) 
 
 To link with Pelican many people seem to create a new pelican branch, and the pelican Makefile
 handles switching between branches for creating output.  I didn't find that very transparent so went
