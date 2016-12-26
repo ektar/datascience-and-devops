@@ -6,6 +6,8 @@ Author: Eric Carlson
 slug: aws-compute-environment-p1
 Status: published
 
+[TOC]
+
 I do most of my analysis now on cloud infrastructure as much as possible.  The primary advantages
 are:
 
@@ -14,6 +16,12 @@ are:
 3. I can get by with a cheaper and lighter laptop as it's only acting as a thin client
 4. My hardware doesn't go obsolete - as processing, disks, and gpu get cheaper they become available for rent as needed
 5. I can quickly deploy advanced technology like hadoop clusters, Kubernetes, etc
+
+**Table of contents**
+
+[TOC]
+
+## Introduction
 
 One concern using the cloud is security - it's easy to quickly create an ubuntu server on AWS, but
 there's always the worry that you'll leave an open port or that a service will become vulnerable

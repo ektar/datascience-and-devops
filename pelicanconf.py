@@ -2,10 +2,15 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 import os
+import sys
+
+from markdown.extensions.codehilite import CodeHiliteExtension
+from markdown.extensions.toc import TocExtension
 
 AUTHOR = 'Eric T. Carlson'
 SITENAME = 'Data Science and DevOps'
 SITEURL = ''
+EMAIL_ADDR = 'site_datascidevops@carlsonhome.net'
 
 PATH = 'content'
 STATIC_PATHS = ['downloads', 'images']
@@ -65,5 +70,20 @@ DISQUS_DISPLAY_COUNTS = True
 
 #THEME = 'themes/octopress'
 THEME = 'themes/pelican-bootstrap3'
+# THEME = 'themes/built-texts'
+
+sys.path.append(os.curdir)
+from themeconf import *
 
 JINJA_EXTENSIONS = ['jinja2.ext.i18n']
+
+PLUGINS.extend(['code_include', 'extract_toc', 'series', 'related_posts',
+                'better_codeblock_line_numbering'])
+MD_EXTENSIONS = [
+    CodeHiliteExtension(css_class='highlight', linenums=False),
+    TocExtension(anchorlink=True),
+    'markdown.extensions.admonition',
+    'markdown.extensions.extra',
+]
+
+TYPOGRIFY = True
