@@ -89,10 +89,10 @@ Notebook test:
 
 ## References
 
-https://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html
-https://h-gens.github.io/getting-started-with-pelican-and-ipython-notebooks.html
-https://pages.github.com/
-https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
-https://rjweiss.github.io/articles/2014_03_31/testing-ipython-integration/
-http://danielfrg.com/blog/2013/03/08/pelican-ipython-notebook-plugin/
-http://docs.getpelican.com/en/3.1.1/getting_started.html
+* https://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html
+* https://h-gens.github.io/getting-started-with-pelican-and-ipython-notebooks.html
+* https://pages.github.com/
+* https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3
+* https://rjweiss.github.io/articles/2014_03_31/testing-ipython-integration/
+* http://danielfrg.com/blog/2013/03/08/pelican-ipython-notebook-plugin/
+* http://docs.getpelican.com/en/3.1.1/getting_started.html
