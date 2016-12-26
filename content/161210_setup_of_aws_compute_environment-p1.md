@@ -17,10 +17,6 @@ are:
 4. My hardware doesn't go obsolete - as processing, disks, and gpu get cheaper they become available for rent as needed
 5. I can quickly deploy advanced technology like hadoop clusters, Kubernetes, etc
 
-**Table of contents**
-
-[TOC]
-
 ## Introduction
 
 One concern using the cloud is security - it's easy to quickly create an ubuntu server on AWS, but

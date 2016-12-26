@@ -4,17 +4,13 @@ Category:
 Tags: python, website, github
 Author: Eric Carlson
 slug: pelican-website-p3
+Series: pelican-website
 Status: published
 
 As a final step we'll configure Pelican to enable Jupyter notebook integration.  This will let us
 quickly copy in analysis .ipynb files and include math, markdown, and figures.  In further configuration
 we can even enable Pelican plugins for UML diagrams to add text-generated activity/state diagrams,
 or can add plugins for comments to interact with readers.
-
-Part 3 of 3:
-
-* [Part 1]({filename}161201_pelican_setup-p1.md)
-* [Part 2]({filename}161202_pelican_setup-p2.md) 
 
 
 Now add pelican plugins and themes and activate as needed...
@@ -93,6 +89,7 @@ Notebook test:
 
 ## References
 
+https://www.notionsandnotes.org/tech/web-development/pelican-static-blog-setup.html
 https://h-gens.github.io/getting-started-with-pelican-and-ipython-notebooks.html
 https://pages.github.com/
 https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3

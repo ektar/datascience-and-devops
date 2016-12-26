@@ -38,3 +38,9 @@ plt.plot(x, np.sin(x));
 df = pd.DataFrame({'c1':[1,2,3], 'c2':[4,5,6]})
 df
 
+
+# In[1]:
+
+# <!-- collapse=True --> 
+print('Testing Collapsible code')
+

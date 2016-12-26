@@ -5,6 +5,7 @@ dependencies:
 - beautifulsoup4
 - flake8
 - ipython
+- jupyter
 - Markdown
 - matplotlib
 - nbconvert
@@ -12,7 +13,9 @@ dependencies:
 - pandas
 - pip
 - python>=3.5
+- pyzmq
 - pip:
   - disqus-python
-  - pelican
+  - pelican>=3.7
+  - python-gettext
   - typogrify

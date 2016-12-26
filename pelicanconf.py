@@ -47,12 +47,19 @@ SOCIAL = (
              ('LinkedIn', 'https://www.linkedin.com/in/erictcarlson'),
          )
 
+MD_EXTENSIONS = [
+    CodeHiliteExtension(css_class='highlight', linenums=False),
+    TocExtension(anchorlink=True),
+    'markdown.extensions.admonition',
+    'markdown.extensions.extra',
+    ]
+
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-PLUGIN_PATHS = ['/Users/ecarlson/code/external/pelican-plugins', ]
+PLUGIN_PATHS = ['plugins', ]
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
            'liquid_tags.include_code', 'liquid_tags.notebook']
@@ -68,22 +75,15 @@ DEFAULT_METADATA = {
 DISQUS_SITENAME = 'datascidevops'
 DISQUS_DISPLAY_COUNTS = True
 
-#THEME = 'themes/octopress'
 THEME = 'themes/pelican-bootstrap3'
-# THEME = 'themes/built-texts'
 
 sys.path.append(os.curdir)
 from themeconf import *
 
-JINJA_EXTENSIONS = ['jinja2.ext.i18n']
+# JINJA_ENVIRONMENT = ['jinja2.ext.i18n', ]
 
-PLUGINS.extend(['code_include', 'extract_toc', 'series', 'related_posts',
+PLUGINS.extend(['code_include', 'extract_toc', 'series',
                 'better_codeblock_line_numbering'])
-MD_EXTENSIONS = [
-    CodeHiliteExtension(css_class='highlight', linenums=False),
-    TocExtension(anchorlink=True),
-    'markdown.extensions.admonition',
-    'markdown.extensions.extra',
-]
 
 TYPOGRIFY = True
+

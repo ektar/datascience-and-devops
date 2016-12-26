@@ -4,6 +4,7 @@ Category:
 Tags: python, website, github
 Author: Eric Carlson
 slug: pelican-website-p1
+Series: pelican-website
 Status: published
 
 I've run various personal websites since the AOL era - first based on Microsoft's Front Page, then
@@ -22,11 +23,6 @@ launch to many output platforms - GitHub, S3, personal hosting, etc.
 
 Below I'll go through the steps needed to create this website, and a few tests demonstrating 
 capabilities.
-
-Part 1 of 3:
-
-* [Part 2]({filename}161202_pelican_setup-p2.md)
-* [Part 3]({filename}161203_pelican_setup-p3.md) 
 
 ## Local environment
 
@@ -102,5 +98,3 @@ Now, test it out
 ![Bare Website]({filename}/images/161201_pelican_setup/bare-website.png)
 
 Basics are working, now to get it connected to GitHub...
-
-[Part 2]({filename}161202_pelican_setup-p2.md)
