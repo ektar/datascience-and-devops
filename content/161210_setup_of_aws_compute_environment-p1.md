@@ -13,9 +13,9 @@ are:
 
 1. I can quickly scale compute resources as needed for large problems
 2. I can access unlimited cheap storage (e.g. S3) as needed
-3. I can get by with a cheaper and lighter laptop as it's only acting as a thin client
-4. My hardware doesn't go obsolete - as processing, disks, and gpu get cheaper they become available for rent as needed
-5. I can quickly deploy advanced technology like hadoop clusters, Kubernetes, etc
+3. My hardware doesn't go obsolete - as processing, disks, and gpu get cheaper they become available for rent as needed
+4. I can quickly deploy advanced technology like hadoop clusters, Kubernetes, etc
+5. I can get by with a cheaper and lighter laptop as it's only acting as a thin client
 
 ## Introduction
 
