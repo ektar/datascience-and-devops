@@ -1,4 +1,4 @@
-Title: Setting up a Pelican website on github, part 2
+Title: Launch our website to GitHub
 Date: 2016-12-02 05:00
 Category: 
 Tags: python, website, github

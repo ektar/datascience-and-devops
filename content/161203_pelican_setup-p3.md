@@ -1,4 +1,4 @@
-Title: Setting up a Pelican website on github, part 3
+Title: Configure Pelican for Jupyter notebooks, code, and math display
 Date: 2016-12-03 05:00
 Category: 
 Tags: python, website, github

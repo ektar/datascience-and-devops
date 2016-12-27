@@ -1,9 +1,10 @@
-Title: Secure compute environment on AWS, part 1 
+Title: Create the essentials of a secure cloud-based compute environment: networks and access point 
 Date: 2016-12-10 05:00
 Category: infrastructure
 Tags: aws
 Author: Eric Carlson
 slug: aws-compute-environment-p1
+Series: aws-compute-infrastructure
 Status: published
 
 [TOC]

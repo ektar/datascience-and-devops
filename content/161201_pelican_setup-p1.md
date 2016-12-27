@@ -1,4 +1,4 @@
-Title: Setting up a Pelican website on github, part 1 
+Title: Initialize the Pelican static website generator  
 Date: 2016-12-01 05:00
 Category: 
 Tags: python, website, github
