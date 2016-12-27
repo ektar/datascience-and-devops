@@ -4,9 +4,6 @@ from __future__ import unicode_literals
 import os
 import sys
 
-from markdown.extensions.codehilite import CodeHiliteExtension
-from markdown.extensions.toc import TocExtension
-
 AUTHOR = 'Eric T. Carlson'
 SITENAME = 'Data Science and DevOps'
 SITEURL = ''
@@ -47,12 +44,16 @@ SOCIAL = (
              ('LinkedIn', 'https://www.linkedin.com/in/erictcarlson'),
          )
 
-MD_EXTENSIONS = [
-    CodeHiliteExtension(css_class='highlight', linenums=False),
-    TocExtension(anchorlink=True),
-    'markdown.extensions.admonition',
-    'markdown.extensions.extra',
-    ]
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.toc': {'anchorlink': True},
+        'markdown.extensions.admonition': {},
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+    },
+    'output_format': 'html5',
+}
 
 DEFAULT_PAGINATION = False
 
