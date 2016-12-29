@@ -84,7 +84,6 @@ from themeconf import *
 # JINJA_ENVIRONMENT = ['jinja2.ext.i18n', ]
 
 PLUGINS.extend(['code_include', 'extract_toc', 'series',
-                'better_codeblock_line_numbering'])
+                'better_codeblock_line_numbering', 'tag_cloud'])
 
 TYPOGRIFY = True
-
