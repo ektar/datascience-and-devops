@@ -3,7 +3,7 @@ Date: 2016-12-03 05:00
 Category: 
 Tags: python, website, github
 Author: Eric Carlson
-slug: pelican-website-p3
+slug: pelican-jupyter-and-code
 Series: pelican-website
 Status: published
 

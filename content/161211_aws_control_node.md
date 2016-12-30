@@ -3,7 +3,7 @@ Date: 2016-12-11 05:00
 Category: infrastructure
 Tags: aws
 Author: Eric Carlson
-slug: aws-compute-environment-p2
+slug: aws-control-node
 Series: aws-compute-infrastructure
 Status: published
 

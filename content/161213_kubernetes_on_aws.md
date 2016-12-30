@@ -3,7 +3,7 @@ Date: 2016-12-13 05:00
 Category: infrastructure
 Tags: aws, kubernetes, docker
 Author: Eric Carlson
-slug: aws-compute-environment-p4
+slug: aws-kubernetes
 Series: aws-compute-infrastructure
 Status: published
 

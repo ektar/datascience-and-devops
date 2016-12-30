@@ -1,4 +1,4 @@
-Title: Setup a quick AWS GPU environment
+Title: Setup a quick GPU environment on AWS
 Date: 2016-12-14 05:00
 Category: infrastructure
 Tags: aws, gpu, deep learning
