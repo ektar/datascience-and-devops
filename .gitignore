@@ -3,3 +3,4 @@ __pycache__/
 _nb_header.html
 pelican.pid
 srv.pid
+content/private

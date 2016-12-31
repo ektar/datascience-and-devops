@@ -72,9 +72,9 @@ get_ipython().magic('matplotlib inline')
 work_desc = "mimic_iii_note_conversion"
 
 
-# In[8]:
+# In[24]:
 
-time_str, path_config, creds = eu.load_config_v2()
+time_str, path_config, creds = eu.load_config_v2(creds_file='../../private/mit_freq_fliers/credentials.yaml')
 print('Time string: {}'.format(time_str))
 
 print('Paths:')
@@ -177,35 +177,35 @@ categories = ['Advanced.Cancer', 'Advanced.Heart.Disease', 'Advanced.Lung.Diseas
        'Schizophrenia.and.other.Psychiatric.Disorders', 'Unsure',]
 
 
-# In[22]:
+# In[25]:
 
 data_path = pl.Path(path_config['repo_data_dir'])
 
 
-# In[23]:
+# In[26]:
 
 [p for p in data_path.glob('*csv')]
 
 
-# In[24]:
+# In[27]:
 
 nursing_notes_path = data_path.joinpath('nursingNotesClean.csv')
 discharge_notes_path = data_path.joinpath('dischargeSummariesClean.csv')
 
 
-# In[25]:
+# In[28]:
 
 nursing_notes = pd.read_csv(nursing_notes_path.as_posix())
 disch_notes = pd.read_csv(discharge_notes_path.as_posix()).rename(columns={'subject.id':'subject_id'})
 
 
-# In[26]:
+# In[29]:
 
 display.display(nursing_notes.head(5))
 print(nursing_notes.loc[0,'text'])
 
 
-# In[27]:
+# In[30]:
 
 display.display(disch_notes.head(5))
 print(disch_notes.loc[0,'text'][:500])
@@ -831,9 +831,4 @@ compare_texts(questionable_matches.iloc[0])
 # In[115]:
 
 compare_texts(questionable_matches.iloc[1])
-
-
-# In[ ]:
-
-
 
