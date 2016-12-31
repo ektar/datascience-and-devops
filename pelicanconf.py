@@ -10,7 +10,7 @@ SITEURL = ''
 EMAIL_ADDR = 'site_datascidevops@carlsonhome.net'
 
 PATH = 'content'
-STATIC_PATHS = ['downloads', 'images']
+STATIC_PATHS = ['downloads', 'images', 'notebooks']
 ARTICLE_SAVE_AS = '{date:%Y}/{slug}.html'
 ARTICLE_URL = '{date:%Y}/{slug}.html'
 
@@ -66,6 +66,7 @@ PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook']
 
 NOTEBOOK_DIR = 'notebooks'
+CODE_DIR = 'notebooks'
 
 EXTRA_HEADER = open('_nb_header.html').read() if os.path.exists('_nb_header.html') else None
 
