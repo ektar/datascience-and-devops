@@ -8,7 +8,8 @@ Status: published
 
 [TOC]
 
-One tricky thing to deal with in the transition from MIMIC II to MIMIC III has been that
+One tricky thing to deal with in the transition from [MIMIC II](https://physionet.org/mimic2/) to 
+[MIMIC III](https://mimic.physionet.org/) has been that
 IDs have changed and are sometimes missing, so work that a collaborating team did to annotate 
 patient notes in MIMIC II is not translatable to MIMIC III.  This notebook shows one way to discover 
 note relationships between the two datasets.
@@ -50,6 +51,19 @@ length, the similarity of the beginning of the note (first several hundred chara
 whitespace), and the similarity of the end of the note (last several hundred characters).  When there
 were multiple possible matches for a note, the note with the aggregate lowest distance was chosen
 as the most probable match.
+
+New Approach:
+
+1. Gather all notes from MIMIC II for each subject
+2. Gather all notes from MIMIC III for the same subjects
+3. For each subject's notes in MIMIC II, calculate the following metrics for that subject MIMIC III 
+   notes:
+    * Difference in note length
+    * Similarity of the text beginning (as evaluated by [SequenceMatcher](https://docs.python.org/2/library/difflib.html))
+    * Similarity of the text ending
+4. Any notes with more than 10%-20% difference in any of these metrics are considered to not match
+5. If there are multiple potential matches remaining, the notes with the minimum overall distance are
+   considered best matches.
 
 In this case thresholds for the heuristic distance measure and overall matches were chosen by
 inspection, and that resulted in reasonable results.  A larger problem, or a problem with less
