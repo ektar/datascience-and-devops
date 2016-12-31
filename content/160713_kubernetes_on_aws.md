@@ -1,5 +1,5 @@
 Title: Deploy Kubernetes for container orchestration
-Date: 2016-12-13 05:00
+Date: 2016-07-13 05:00
 Category: infrastructure
 Tags: aws, kubernetes, docker
 Author: Eric Carlson

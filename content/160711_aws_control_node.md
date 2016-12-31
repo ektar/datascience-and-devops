@@ -1,5 +1,5 @@
 Title: Add a control node to our AWS compute environment
-Date: 2016-12-11 05:00
+Date: 2016-07-11 05:00
 Category: infrastructure
 Tags: aws
 Author: Eric Carlson

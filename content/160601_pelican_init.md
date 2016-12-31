@@ -1,5 +1,5 @@
 Title: Initialize the Pelican static website generator  
-Date: 2016-12-01 05:00
+Date: 2016-06-01 05:00
 Category: 
 Tags: python, website, github
 Author: Eric Carlson

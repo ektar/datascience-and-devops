@@ -1,5 +1,5 @@
 Title: Setup a quick GPU environment on AWS
-Date: 2016-12-14 05:00
+Date: 2016-07-14 05:00
 Category: infrastructure
 Tags: aws, gpu, deep learning
 Author: Eric Carlson

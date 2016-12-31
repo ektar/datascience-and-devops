@@ -1,5 +1,5 @@
 Title: Create a Jupyterhub server as a data science front-end
-Date: 2016-12-12 05:00
+Date: 2016-07-12 05:00
 Category: infrastructure
 Tags: aws
 Author: Eric Carlson
