@@ -1,7 +1,7 @@
 Title: MIMIC II to MIMIC III Note Matching
 Date: 2016-10-20 05:00
 Category: Data Science
-Tags: data science, mimic, notes, pandas, sqlalchemy
+Tags: data science, mimic, nlp, pandas, sqlalchemy
 Author: Eric Carlson
 slug: mimic-iii-note-matching
 Status: published
