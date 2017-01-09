@@ -1,5 +1,5 @@
 Title: ICD9-based encounter classification on MIMIC III
-Date: 2016-12-30 05:00
+Date: 2017-01-02 05:00
 Category: Data Science
 Tags: data science, icd9, mimic, pandas, machine learning, sklearn, logistic regression
 Author: Eric Carlson

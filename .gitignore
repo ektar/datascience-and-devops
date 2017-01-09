@@ -4,3 +4,5 @@ _nb_header.html
 pelican.pid
 srv.pid
 content/private
+.idea
+.DS_Store
