@@ -6,3 +6,4 @@ srv.pid
 content/private
 .idea
 .DS_Store
+.c9
