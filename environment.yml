@@ -4,6 +4,7 @@ dependencies:
 - anaconda
 - beautifulsoup4
 - flake8
+- html5lib
 - ipython
 - jupyter
 - Markdown

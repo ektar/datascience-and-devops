@@ -42,6 +42,7 @@ LINKS = (
 # Social widget
 SOCIAL = (
              ('LinkedIn', 'https://www.linkedin.com/in/erictcarlson'),
+             ('Github', 'https://github.com/ektar')
          )
 
 MARKDOWN = {
@@ -85,6 +86,6 @@ from themeconf import *
 # JINJA_ENVIRONMENT = ['jinja2.ext.i18n', ]
 
 PLUGINS.extend(['code_include', 'extract_toc', 'series',
-                'better_codeblock_line_numbering', 'tag_cloud'])
+                'better_codeblock_line_numbering', 'tag_cloud', 'simple_footnotes'])
 
 TYPOGRIFY = True
