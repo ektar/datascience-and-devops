@@ -31,4 +31,4 @@ involves the creation of models predicting patient deterioration in and out of t
 integration into clinical workflow, and the development of systems to collect, clean, and process 
 patient data and score models in real time.
 
-[Resume]({attach}/downloads/carlson-resume-161223.pdf)
+[Resume]({attach}/downloads/carlson_resume.pdf)
