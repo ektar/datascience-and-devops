@@ -11,7 +11,11 @@ Status: published
 
 We've sketched out a rough architecture at this point, time to get an estimate
 of expected cost, and think through how well we can expect it to meet our original
-design goals.
+design goals.  Besides overall user experience, I find it's important to carefully
+think through the limitations of any project - what a thing _can't_ do is important
+as what it can.  (Avoid scope creep!)  Lastly, it's always important to include
+non-functional design requirements like security, performance, etc, as these can
+make or break the project.
 
 # Expected Cost
 
