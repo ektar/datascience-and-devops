@@ -1,5 +1,5 @@
 Title: Workbench Quick Start Instructions
-Date: 2017-08-02 05:00
+Date: 2017-08-10 05:00
 Category: Infrastructure
 Tags: kubernetes, aws, docker, data science
 Author: Eric Carlson
