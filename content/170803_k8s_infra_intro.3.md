@@ -145,8 +145,86 @@ the price of a new MacBook, and you have the advantage of being able to scale to
 
 # Security
 
-Pellentesque feugiat felis at purus ultrices, ut consequat arcu finibus. Sed gravida leo a lorem eleifend auctor. Ut ex nunc, pharetra non suscipit in, tincidunt a magna. Ut vitae urna vitae lectus faucibus ultricies. Quisque vel nisl eget nulla porta dapibus quis ac ipsum. Vestibulum rutrum, odio vitae accumsan blandit, lectus orci iaculis dolor, facilisis sagittis velit lectus non dui. Donec id leo pellentesque, pretium justo et, vestibulum metus. Nam elit eros, euismod id rhoncus aliquam, auctor sed nibh.
+Security of these kinds of systems are always foremost on my mind.  While it's
+tempting to focus on just the data science aspects, it's no fun when your account
+gets shut down because someone's gotten in and been routing spam mail through
+your servers, mining bitcoin, or other uninvited activities.
+
+My typical approach is to have a VPC with public and private subnets, described
+[here](https://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html).
+This used to be time consuming to put together, but with Amazon's 
+[wizards](https://console.aws.amazon.com/vpc/home?region=us-east-1#wizardFullpagePublicAndPrivate:)
+it's become quite easy.  Following their wizard will result in a private cloud
+environment with 2 subnets - one that has direct public access where you would
+launch any internet-facing servers, and another that accesses websites through
+a proxy of some sort (e.g. a Network Address Translation (NAT) unit, or other),
+and that has no direct connect for outside users to access.  
+
+This type of setup is very nice from a security perspective as you dramatically
+reduce your "attack surface area" - the number of computers, ports, and services
+that are directly exposed to attack.  For my purposes I generally just launch
+a single computer, known as a [Bastion Host](https://aws.amazon.com/blogs/security/controlling-network-access-to-ec2-instances-using-a-bastion-server/),
+that only exposes a single port for tunneling, and that I use to connect to all
+other internal hosts.  I'll write further posts on how I use ssh tunneling to
+do this, but it can be surprisingly easy to configure and work with, and it allows
+you to launch services like Jupyter, Spark, and other web applications inside
+your private cloud with little to fear as they're not directly connected to
+the internet, and as all of your activity is encrypted via your SSH tunnel.
+
+Security is always an engineering challenge, in which you try to find the optimum
+point that reduces risks of relevant attack vectors to an acceptible level, is
+feasible to implement and maintain, and feasible for end users to use.  For this
+project I decided that this VPC private-public configuration didn't meet the requirements,
+primarily due to ease of implementation for data scientists, and also due to
+cost with the default configurations.  For example, the NAT device that is required
+for the computers in the private network to get outside connectivity (e.g. to download
+debian package) costs $ 0.05/hr, or $ 36/mo!  I generally reduce costs by
+configuring my bastion node to also serve as a NAT device, but that gets into
+fairly low level linux configuration that is out of the scope of this blog.
+
+The security approach I take here is to leverage Kubernetes itself, along with
+Amazon security groups, to limit access to relevant nodes and ports.  Each of
+the kubernetes nodes has both a public and private interface, which eliminates
+the need for the NAT device and dramatically reduces the overhead cost.  The
+default configuration will only expose the SSH port of the computers themselves,
+the API port for the master (protected by K8s authentication and https), and
+an SSH port for a container running inside the K8s cluster itself that will
+serve as our Bastion entry point.  We will still be able to launch Jupyter,
+Spark, and other services on our cluster, and because they are not exposed
+with ingresses or with security groups they will be inaccessible by unauthorized
+users.
 
 # Limitations
 
-Pellentesque feugiat felis at purus ultrices, ut consequat arcu finibus. Sed gravida leo a lorem eleifend auctor. Ut ex nunc, pharetra non suscipit in, tincidunt a magna. Ut vitae urna vitae lectus faucibus ultricies. Quisque vel nisl eget nulla porta dapibus quis ac ipsum. Vestibulum rutrum, odio vitae accumsan blandit, lectus orci iaculis dolor, facilisis sagittis velit lectus non dui. Donec id leo pellentesque, pretium justo et, vestibulum metus. Nam elit eros, euismod id rhoncus aliquam, auctor sed nibh.
+Like any system, ours will not be all things to all people, and that's _ok_!
+As currently designed, this is intended to really be a platform for a datascientist
+and several of his/her collaborators.  As such, I'm really focusing on making
+a generic platform that can be expanded with the latest tools, at the expense
+of developing a great user interface for new users.  I think this has the
+benefit of exposing the internals and providing a good learning tool, but
+it will certainly have some rough edges.
+
+In particular, expected rough edges are:
+
+- No central user interface - the administrator will need to use commandline
+  tools to create new types of instances, set the numbers of instances, launch 
+  new applications, etc.  I've tried to make this as user friendly as possible,
+  but it's still a command line interface (CLI).
+
+- Some linux experience is helpful - the project will be run from a linux
+  Bash command line, and SSH (Secure Shell) is used to access the services.  The
+  basics are easy to pick up and extremely beneficial for any data scientist,
+  so I hope this doesn't drive anyone away, but it is an aspect of the environment.
+
+- Limited auto scaling/automation - in a larger system with dozens/hundreds of
+  VMs it would make sense to have all kinds of automation, e.g. monitoring the
+  CPU usage of machines and creating new ones when capacity is being reached,
+  or eliminating resources when there is downtime.  In a system with 3-5 computers,
+  however, this would be overkill, and due to the budget constraints would likely
+  be unwanted - e.g. I want to know when my friends are doing something that will
+  result in a $1k credit card charge!
+
+Despite these rough edges, I've been using this platform for the last several
+months and already found it extremely enjoyable, and I hope you do, too!
+
+On to the setup!
