@@ -1,4 +1,4 @@
-Title: Kubernetes-based Data Science Workbench: Intro - Design
+Title: Kubernetes-based Data Science Workbench: Intro - Design Requirements
 Date: 2017-08-02 05:00
 Category: Infrastructure
 Tags: kubernetes, aws, docker, data science
@@ -14,9 +14,7 @@ we can start evaluating our options and creating the solution architecture.  It
 will be critical to balance cost, performance, ease of administration, and ease
 of use in order to make this a truly viable platform.
 
-# Solution Architecture
-
-## Primary Developer Interface
+# Primary Developer Interface
 
 Since I plan to allocate the lion's share of the budget on cloud infrastructure
 my personal interface will need to be relatively bare-boned.  I decided to go with
@@ -47,7 +45,7 @@ it a free product.  I'm still excited to follow Che as it can be self-hosted,
 but Cloud9 is a great alternative until then, and doesn't really lock into Amazon
 services as it allows connection to other services via SSH and is still free.
 
-## Infrastructure Management and Deployment
+# Infrastructure Management and Deployment
 
 In my work at Philips I became extremely familiar with the virtualization
 and containerization, deploying a medium-sized OpenStack deployment for data scientists
@@ -120,7 +118,7 @@ are:
   to support K8s more and more, making deployment of those complex systems relatively
   push-button.
 
-## Hosting Provider
+# Hosting Provider
 
 The main hosting providers I considered are AWS, Google, and Microsoft Azure,
 with AWS and Google by far being my favorites.  Google's main advantage is that
@@ -135,7 +133,7 @@ that will be a better learning/demo experience, and I already have significant a
 of data in S3 and EBS/EFS that I want to connect to.  An additional benefit is
 Amazon's purchase of Cloud9, which I'll make use of to kickstart the project.
 
-## Administrator Experience
+# Administrator Experience
 
 My goal administrator experience is for the end product to require very minimal
 time to keep running and do basic tasks like adding users, creating new types
@@ -154,7 +152,7 @@ quickly becomes a nightmare.  The scripts I've written will also be deploying
 a full LDAP solution with a web-based UI and default configuration, and all
 containers will tie into this configuration to get usernames, user id's, ssh keys, etc.
 
-## User Experience
+# User Experience
 
 My goal user experience for the data scientist and his/her colleagues is to be
 as simple as possible to access the deployed resources and get to work.  I assume

@@ -42,7 +42,8 @@ LINKS = (
 # Social widget
 SOCIAL = (
              ('LinkedIn', 'https://www.linkedin.com/in/erictcarlson'),
-             ('Github', 'https://github.com/ektar')
+             ('Github', 'https://github.com/ektar'),
+             ('Github', 'https://github.com/erictcgs')
          )
 
 MARKDOWN = {
