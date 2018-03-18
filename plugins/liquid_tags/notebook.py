@@ -167,7 +167,7 @@ div.collapseheader {
 }
 </style>
 
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 <script type="text/javascript">
 init_mathjax = function() {
     if (window.MathJax) {
@@ -304,7 +304,6 @@ def notebook(preprocessor, tag, markup):
                     {'enabled':True, 'start':start, 'end':end}})
 
     template_file = 'basic'
-
     if IPYTHON_VERSION >= 3:
         if os.path.exists('pelicanhtml_3.tpl'):
             template_file = 'pelicanhtml_3'

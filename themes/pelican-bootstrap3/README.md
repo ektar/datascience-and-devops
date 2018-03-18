@@ -21,7 +21,30 @@ First:
 
 Then:
 
-Point the `THEME` variable in your `pelicanconf.py` to `/path/to/pelican-bootstrap3`
+Point the `THEME` variable in your `pelicanconf.py` to
+`/path/to/pelican-bootstrap3` and add 
+
+```
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+```
+
+to your Pelican configuration, as this template can be
+translated (see `Translations` below). You also
+need to activate a plugin that initializes the i18n jinja extension. One
+possibility is an up to date version of the
+[`i18n_subsites`](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
+plugin:
+
+`PLUGIN_PATHS = ['/path/to/git/pelican-plugins']`
+`PLUGINS = ['i18n_subsites']`
+
+If you are using
+[`i18n_subsites`](https://github.com/getpelican/pelican-plugins/tree/master/i18n_subsites)
+and you are not using English as your default language, make sure to
+also correctly specify the default language of the theme. Otherwise
+the translations will not be used on your default site.
+
+`I18N_TEMPLATES_LANG = 'en'`
 
 ## Usage
 
@@ -65,26 +88,31 @@ of the article and in the index of articles. Set `SHOW_ARTICLE_CATEGORY` to
 show the Category of each article. Set `SHOW_DATE_MODIFIED` to True to show the
 article modified date next to the published date.
 
-### Custom CSS
+### Custom CSS/JS
 
-If you want to add custom css to the theme, without having to clone and
-maintain your own version of the theme, you can use the `CUSTOM_CSS` variable.
+If you want to add custom css/js to the theme, without having to clone and
+maintain your own version of the theme, you can use `CUSTOM_CSS` and `CUSTOM_JS` variables.
 The value is the location where you tell Pelican to put the file (see below):
 
 ```
-CUSTOM_CSS = 'static/custom.css'
+CUSTOM_CSS = 'static/css/custom.css'
+CUSTOM_JS = 'static/js/custom.js'
 ```
 
 To tell Pelican to copy the relevant file to the desired destination, add the
 path to `STATIC_PATHS` and the destination to `EXTRA_PATH_METADATA`, like so:
 
 ```
-# Tell Pelican to add 'extra/custom.css' to the output dir
-STATIC_PATHS = ['images', 'extra/custom.css']
+# Tell Pelican to add files from 'extra' to the output dir
+STATIC_PATHS = [
+  'images',
+  'extra'
+]
 
 # Tell Pelican to change the path to 'static/custom.css' in the output dir
 EXTRA_PATH_METADATA = {
-    'extra/custom.css': {'path': 'static/custom.css'}
+    'extra/custom.css': {'path': 'static/css/custom.css'},
+    'extra/custom.js': {'path': 'static/js/custom.js'}
 }
 ```
 
@@ -236,8 +264,14 @@ icon to show. You can provide an alternative icon string as the third string (as
 * **Categories** will be shown if `DISPLAY_CATEGORIES_ON_SIDEBAR` is set to _True_
 * **Recent Posts** will be shown if `DISPLAY_RECENT_POSTS_ON_SIDEBAR` is set to _True_
 	* Use `RECENT_POST_COUNT` to control the amount of recent posts. Defaults to **5**
+* **Archive** will be shown if `DISPLAY_ARCHIVE_ON_SIDEBAR` is set to _True_ and `MONTH_ARCHIVE_SAVE_AS` is set up properly.
+* **Authors** will be shown if `DISPLAY_AUTHORS_ON_SIDEBAR` is set to _True_
 
-To remove the sidebar entirely, set `HIDE_SIDEBAR` to _True_.
+Other sidebar related options include:
+
+* To remove the sidebar entirely, set `HIDE_SIDEBAR` to _True_.
+* To move the sidebar to the left, set `SIDEBAR_ON_LEFT` to _True_.
+* To turn off inlined icons in the titles set `DISABLE_SIDEBAR_TITLE_ICONS` to
 
 ### reStructuredText styles
 
@@ -313,7 +347,7 @@ As an alternative, you may use [Shariff](https://github.com/heiseonline/shariff)
   * To customize the social media buttons, set
     * `SHARIFF_BACKEND_URL` (see [Shariff Backends](https://github.com/heiseonline/shariff#backends))
     * `SHARIFF_LANG` (`de` (default), `en` or `fr`)
-    * `SHARIFF_ORIENTATION` (`horizontal` (defualt) or `vertical`)
+    * `SHARIFF_ORIENTATION` (`horizontal` (default) or `vertical`)
     * `SHARIFF_SERVICES` (default: `[&quot;facebook&quot;,&quot;googleplus&quot;]`)
     * `SHARIFF_THEME` (`standard` or `gray`)
     * `SHARIFF_TWITTER_VIA` (`True`/`False`, uses `TWITTER_USERNAME`)
@@ -332,6 +366,10 @@ All you have to do, is:
 By default, the Tipue search page is configured at "/search.html", but you can override that with the `SEARCH_URL` 
 setting, which comes in handy if you have fancy rewrite rules in your Apache or Nginx configuration.
 
+### Flattr
+
+This theme has support for linking your domain with [Flattr](https://flattr.com). To enable this provide your `FLATTR_ID`. Be aware that you will also have to go [Flattr's domain settings](https://flattr.com/settings/domains) and link your domain.
+
 ### Footer
 
 The footer will display a copyright message using the AUTHOR variable and the year of the latest post. If a content license mark is enabled (see above), that will be shown as well.
@@ -346,6 +384,11 @@ SIDEBAR_IMAGES = ["/path/to/image1.png", "/path/to/image2.png"]
 Originally developed for including certification marks in your sidebar. E.g.,
 
 http://dmark.github.io
+
+### Translations
+
+This template can be translated using pybabel and the enclosed Makefile. See
+[Localizing themes with Jinja2](https://github.com/getpelican/pelican-plugins/blob/master/i18n_subsites/localizing_using_jinja2.rst) for more details and pointers.
 
 ## Live example
 

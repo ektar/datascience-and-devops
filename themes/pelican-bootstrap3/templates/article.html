@@ -74,7 +74,7 @@
                 <h1>
                     <a href="{{ SITEURL }}/{{ article.url }}"
                        rel="bookmark"
-                       title="Permalink to {{ article.title|striptags }}">
+                       title="{{ _('Permalink to') }} {{ article.title|striptags }}">
                         {{ article.title }}
                     </a>
                 </h1>
@@ -93,6 +93,7 @@
             {% include 'includes/addthis.html' %}
             {% include 'includes/shariff.html' %}
             {% include 'includes/comments.html' %}
+            {% include 'includes/show_source.html' %}
         </article>
     </section>
 

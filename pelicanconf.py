@@ -57,7 +57,7 @@ MARKDOWN = {
     'output_format': 'html5',
 }
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
@@ -65,7 +65,8 @@ DEFAULT_PAGINATION = False
 PLUGIN_PATHS = ['plugins', ]
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.youtube', 'liquid_tags.vimeo',
-           'liquid_tags.include_code', 'liquid_tags.notebook']
+           'liquid_tags.include_code', 'liquid_tags.notebook',
+           'i18n_subsites', 'summary']
 
 NOTEBOOK_DIR = 'notebooks'
 CODE_DIR = 'notebooks'
@@ -84,7 +85,7 @@ THEME = 'themes/pelican-bootstrap3'
 sys.path.append(os.curdir)
 from themeconf import *
 
-# JINJA_ENVIRONMENT = ['jinja2.ext.i18n', ]
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 
 PLUGINS.extend(['code_include', 'extract_toc', 'series',
                 'better_codeblock_line_numbering', 'tag_cloud', 'simple_footnotes'])
