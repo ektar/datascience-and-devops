@@ -100,4 +100,4 @@ I just made the change manually myself to the copy in my blog's repo
 As of the writing of the article, the above section renders as follows in
 Chrome v65:
 
-![Jupyter Math]({filename}/images/180317-jupyter-math/jupyter-math.png)
+![Jupyter Math]({static}/images/180317-jupyter-math/jupyter-math.png)

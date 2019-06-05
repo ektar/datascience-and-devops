@@ -30,22 +30,22 @@ or the built-in shell in Chrome (after minor hacks to enable).
 
 https://console.aws.amazon.com/iam/home?region=us-east-1#/users
 
-![Step 1]({filename}/images/170813-workbench-prereqs/iam-user-01.png)
+![Step 1]({static}/images/170813-workbench-prereqs/iam-user-01.png)
 
 First adding admin user with more complete credentials - later 
 could add a lower user for normal access
 
-![Step 2]({filename}/images/170813-workbench-prereqs/iam-user-02.png)
+![Step 2]({static}/images/170813-workbench-prereqs/iam-user-02.png)
 
 On permisisons screen, create group
 
-![Step 3]({filename}/images/170813-workbench-prereqs/iam-user-03.png)
+![Step 3]({static}/images/170813-workbench-prereqs/iam-user-03.png)
 
 Creating admin group for launching k8s and general control
 
 Add cloud9 permissions
 
-![Step 4]({filename}/images/170813-workbench-prereqs/iam-user-04.png)
+![Step 4]({static}/images/170813-workbench-prereqs/iam-user-04.png)
 
 In the end added:
 
@@ -61,15 +61,15 @@ In the end added:
 
 Select this group
 
-![Step 5]({filename}/images/170813-workbench-prereqs/iam-user-05.png)
+![Step 5]({static}/images/170813-workbench-prereqs/iam-user-05.png)
 
-![Step 6]({filename}/images/170813-workbench-prereqs/iam-user-06.png)
+![Step 6]({static}/images/170813-workbench-prereqs/iam-user-06.png)
 
 Save access key id and secret access key
 
 Go back to IAM main screen, copy link for your account's dashboard
 
-![Step 7]({filename}/images/170813-workbench-prereqs/iam-user-07.png)
+![Step 7]({static}/images/170813-workbench-prereqs/iam-user-07.png)
 
 # Domain
 
@@ -82,7 +82,7 @@ Amazon has a good set of tutorials on this, so I'll just point to their
 documentation - you only need to follow step 2 from
 [Amazon's Instructions](https://aws.amazon.com/getting-started/tutorials/get-a-domain/)
 
-![Register a Domain]({filename}/images/170813-workbench-prereqs/register-domain-1.png)
+![Register a Domain]({static}/images/170813-workbench-prereqs/register-domain-1.png)
 
 # Github
 

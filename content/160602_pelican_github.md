@@ -19,7 +19,7 @@ and another that can be private with the Pelican code.
 
 First, create a new repository with the name `<username>.github.io`, set to public.
 
-![Bare Website]({filename}/images/161201_pelican_setup/github-setup.png)
+![Bare Website]({static}/images/161201_pelican_setup/github-setup.png)
 
 Next, create a repository that will be for the Pelican generator code, I named mine `datascience-and-devops`.
 

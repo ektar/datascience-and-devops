@@ -33,7 +33,7 @@ ssh config file this becomes nearly transparent.
  
 An overview diagram of what we'll setup is below:
 
-![Environment Overview]({filename}/images/161210_setup_of_aws_compute_environment/environment_overview.png)
+![Environment Overview]({static}/images/161210_setup_of_aws_compute_environment/environment_overview.png)
 
 The primary components:
 
@@ -48,17 +48,17 @@ The primary components:
  
 We'll initially be following the AWS VPC [guide](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html)
  
-![AWS VPC]({filename}/images/161210_setup_of_aws_compute_environment/nat-gateway-diagram.png)
+![AWS VPC]({static}/images/161210_setup_of_aws_compute_environment/nat-gateway-diagram.png)
 
 First, create an elastic IP to serve as the public IP of our NAT gateway
 
-![Step 1]({filename}/images/161210_setup_of_aws_compute_environment/net-step-01.png)
+![Step 1]({static}/images/161210_setup_of_aws_compute_environment/net-step-01.png)
 
 Next, create a virtual private cloud (VPC) with name of your choice (here, "ACS Network"), and
 2 subnets, one public and one private.  Choose the elastic IP created above, and enable S3 and
 DNS support.
 
-![Step 2]({filename}/images/161210_setup_of_aws_compute_environment/net-step-02.png)
+![Step 2]({static}/images/161210_setup_of_aws_compute_environment/net-step-02.png)
 
 ## Bastion Node creation
 
@@ -67,11 +67,11 @@ very high spec as it will only be serving as a low-traffic network gateway.  Mos
 likely be going through S3 or other Amazon services, so the bastion will mainly be for ssh tunnels
 enabling jupyterhub connections, VNC desktops, etc as needed.  
 
-![Step 3]({filename}/images/161210_setup_of_aws_compute_environment/net-step-03.png)
-![Step 4]({filename}/images/161210_setup_of_aws_compute_environment/net-step-04.png)
-![Step 5]({filename}/images/161210_setup_of_aws_compute_environment/net-step-05.png)
-![Step 6]({filename}/images/161210_setup_of_aws_compute_environment/net-step-06.png)
-![Step 7]({filename}/images/161210_setup_of_aws_compute_environment/net-step-07.png)
+![Step 3]({static}/images/161210_setup_of_aws_compute_environment/net-step-03.png)
+![Step 4]({static}/images/161210_setup_of_aws_compute_environment/net-step-04.png)
+![Step 5]({static}/images/161210_setup_of_aws_compute_environment/net-step-05.png)
+![Step 6]({static}/images/161210_setup_of_aws_compute_environment/net-step-06.png)
+![Step 7]({static}/images/161210_setup_of_aws_compute_environment/net-step-07.png)
 
 Note that I have a security group locking down ssh access to a single IP range, corresponding
 to my home network.  This is optional - just locking down access to port 22 for ssh is sufficient.

@@ -94,10 +94,22 @@ If you experience issues with code generation (e.g., missing closing tags),
 add `SUMMARY_MAX_LENGTH = None` to your settings file.
 
 ## Speakerdeck Tag
-To insert a Speakerdeck viewer into your content, enable the
-`liquid_tags.speakerdeck` plugin and add the following to your source document:
 
-    {% speakerdeck speakerdeck_id %}
+To insert a Speakerdeck viewer into your content, follow these steps:
+
+1. Enable the `liquid_tags.soundcloud` plugin
+2. Add the following to your source document:
+
+  ```html
+  {% speakerdeck speakerdeck_id [ratio] %}
+  ```
+
+### Note
+
+- The ratio is a decimal number and is optional.
+- Ratio accept decimal number and digit after decimal is optional.
+- If ratio is not specified, then it will be `1.33333333333333` (4/3).
+- An example value for the ration can be `1.77777777777777` (16/9).
 
 ## Video Tag
 To insert HTML5-friendly video into your content, enable the `liquid_tags.video`
@@ -179,7 +191,8 @@ accomplish this is to add the following to your theme’s header template…
 
 … and in your settings file, include the line:
 
-      EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+      from io import open
+      EXTRA_HEADER = open('_nb_header.html', encoding='utf-8').read()
 
 This will insert the proper CSS formatting into your generated document.
 
@@ -219,6 +232,17 @@ loaded and can be expanded by tapping on them. Cells containing the
 comment line `# <!-- collapse=False -->` will be expanded on load but
 can be collapsed by tapping on their header. Cells without collapsed
 comments are rendered as standard code input cells.
+
+## Configuration settings in custom tags
+
+Tags do not have access to the full Pelicans settings, and instead arrange for 
+the variables to be passed to the tag.  For tag authors who plan to add their 
+tag as in-tree tags, they can just add the variables they need to an array in 
+`mdx_liquid_tags.py`, but out-of-tree tags can specify which variables they 
+need by including a tuple of (variable, default value, helptext) in the 
+user's `pelicanconf.py` settings:
+
+    LIQUID_CONFIGS = (('PATH', '.', "The default path"), ('SITENAME', 'Default Sitename', 'The name of the site'))
 
 ## Testing
 

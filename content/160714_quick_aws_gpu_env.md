@@ -25,7 +25,7 @@ Amazon's made things easy by pre-configuring a CentOS machine with all the neces
 and the most common DL libraries.  We can browse to the Deep Learning AMI 
 [here](https://aws.amazon.com/marketplace/pp/B01M0AXXQB)
 
-![AWS GPU]({filename}/images/161214_aws_gpu/step-01.png)￼
+![AWS GPU]({static}/images/161214_aws_gpu/step-01.png)￼
 
 Select continue to go on with configuration.  The main things to select are:
 
@@ -35,15 +35,15 @@ Select continue to go on with configuration.  The main things to select are:
   * Security Group: Select previously configured security group to allow access through bastion node
   * Key Pair: Choose your ssh key
 
-![AWS GPU]({filename}/images/161214_aws_gpu/step-02.png)￼
+![AWS GPU]({static}/images/161214_aws_gpu/step-02.png)￼
 
 Verify settings on confirmation page
 
-![AWS GPU]({filename}/images/161214_aws_gpu/step-03.png)￼
+![AWS GPU]({static}/images/161214_aws_gpu/step-03.png)￼
 
 And when you go to your console you should see the machine launching
 
-![AWS GPU]({filename}/images/161214_aws_gpu/step-04.png)￼
+![AWS GPU]({static}/images/161214_aws_gpu/step-04.png)￼
 
 ## Connect through our Bastion node and verify we see the GPU
 
@@ -280,6 +280,6 @@ Browse to localhost:8888
 
 **Note** I had to remove '.local' - numpy without gpu support was overriding the numpy on this system
 
-![AWS GPU]({filename}/images/161214_aws_gpu/step-05.png)￼
+![AWS GPU]({static}/images/161214_aws_gpu/step-05.png)￼
 ￼
 

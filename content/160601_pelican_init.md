@@ -95,6 +95,6 @@ Now, test it out
 	$ make html
 	$ make serve
 
-![Bare Website]({filename}/images/161201_pelican_setup/bare-website.png)
+![Bare Website]({static}/images/161201_pelican_setup/bare-website.png)
 
 Basics are working, now to get it connected to GitHub...

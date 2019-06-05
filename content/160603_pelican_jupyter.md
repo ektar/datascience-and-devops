@@ -24,7 +24,7 @@ Also add theme to start, using Jake Vanderplaas' since he wrote the notebook plu
 	:::bash
 	$ git submodule add https://github.com/jakevdp/pelican-octopress-theme.git themes/octopress
 
-Add liquid plugin to pelicon conf and add theme (`pelicanconf.py`):
+Add liquid plugin to pelican conf and add theme (`pelicanconf.py`):
 
 	PLUGIN_PATHS = ['/Users/ecarlson/code/external/pelican-plugins', ]
 	PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
@@ -47,7 +47,7 @@ With these changes we should now be able to create Jupyter notebooks and include
 posts (tests below).
 
 Lastly, I like to modify my jupyter to auto-save python files when saving .ipynb - this makes it
-easier in git to tell what changed from version to version, as often meaninglss changes (e.g.
+easier in git to tell what changed from version to version, as often meaningless changes (e.g.
 re-running a notebook, which changes cell numbering) result in a commit log noise.
 
 `~/.jupyter/jupyter_notebook_config.py`:

@@ -194,7 +194,7 @@ Great, now let's install the dashboard for visualization
 
 If that worked then we should be able to browse to localhost:8080/ui to view
 
-![Kubernetes]({filename}/images/161213_setup_kubernetes/step-01.png)
+![Kubernetes]({static}/images/161213_setup_kubernetes/step-01.png)
 
 Success!
 
@@ -212,7 +212,7 @@ To test the system, let's deploy a simple web server, nginx:
 	NAME       DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
 	my-nginx   2         2         2            2           1h
 
-![Kubernetes]({filename}/images/161213_setup_kubernetes/step-02.png)
+![Kubernetes]({static}/images/161213_setup_kubernetes/step-02.png)
 
 From those commands we see that we've deployed 2 nginx replicas, essentially 2 copies of the
 same microservice running our web server.  We'll create a simple load balancer on top of them - 
@@ -227,7 +227,7 @@ any reason (e.g. if the underlying VM is destroyed).
 	kubernetes   100.64.0.1      <none>        443/TCP        2h        <none>
 	my-nginx     100.71.27.183   <pending>     80:30836/TCP   5m        run=my-nginx
 
-![Kubernetes]({filename}/images/161213_setup_kubernetes/step-03.png)
+![Kubernetes]({static}/images/161213_setup_kubernetes/step-03.png)
 
 Now we see that nginx has a cluster ip of 100.71.27.183 and port 80, with no external ip.  That's
 ok as we're using our ssh magic to tunnel through, no external ip necessary.
@@ -240,11 +240,11 @@ added.  This will create a socks proxy
 I like to keep Firefox around for a proxy web client, you can configure it by going to the 
 network panel of the advanced settings and pointing it at localhost:8099 like so:
 
-![Kubernetes]({filename}/images/161213_setup_kubernetes/firefox-proxy.png)
+![Kubernetes]({static}/images/161213_setup_kubernetes/firefox-proxy.png)
 
 Now in firefox we should be able to browse to the IP we saw before, 100.71.27.183:
 
-![Kubernetes]({filename}/images/161213_setup_kubernetes/step-04.png)
+![Kubernetes]({static}/images/161213_setup_kubernetes/step-04.png)
 
 It worked!  Let's clean up now...
 
@@ -253,7 +253,7 @@ It worked!  Let's clean up now...
 	deployment "my-nginx" deleted
 	service "my-nginx" deleted
 
-![Kubernetes]({filename}/images/161213_setup_kubernetes/step-05.png)
+![Kubernetes]({static}/images/161213_setup_kubernetes/step-05.png)
 
 # Conclusion
 

@@ -17,12 +17,12 @@ and all other servers will be automatically configured.
 
 ## Create a control node virtual machine
 
-![AWS VPC]({filename}/images/161211_setup_aws_environment/aws-step-01.png)
-![AWS VPC]({filename}/images/161211_setup_aws_environment/aws-step-02.png)
-![AWS VPC]({filename}/images/161211_setup_aws_environment/aws-step-03.png)
-![AWS VPC]({filename}/images/161211_setup_aws_environment/aws-step-04.png)
-![AWS VPC]({filename}/images/161211_setup_aws_environment/aws-step-05.png)
-![AWS VPC]({filename}/images/161211_setup_aws_environment/aws-step-06.png)
+![AWS VPC]({static}/images/161211_setup_aws_environment/aws-step-01.png)
+![AWS VPC]({static}/images/161211_setup_aws_environment/aws-step-02.png)
+![AWS VPC]({static}/images/161211_setup_aws_environment/aws-step-03.png)
+![AWS VPC]({static}/images/161211_setup_aws_environment/aws-step-04.png)
+![AWS VPC]({static}/images/161211_setup_aws_environment/aws-step-05.png)
+![AWS VPC]({static}/images/161211_setup_aws_environment/aws-step-06.png)
 
 ## Configure SSH to login through bastion node
  
