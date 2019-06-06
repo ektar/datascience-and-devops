@@ -9,14 +9,14 @@ Status: published
 
 [TOC]
 
-We saw in the [previous post]({static}/161230_icd9_notes_selector.md) that there is promise
+We saw in the [previous post]({filename}/161230_icd9_notes_selector.md) that there is promise
 to using ICD9 codes for pre-classifying encounters more likely to have our concepts of interest.  In
 this post we'll walk through building simple logistic regression classifiers based on a training
 data set, and will evaluate their performance on a test data set.
 
 ## Overview
 
-As described in the [previous post]({static}/161230_icd9_notes_selector.md), our goal here is
+As described in the [previous post]({filename}/161230_icd9_notes_selector.md), our goal here is
 to build a classifier based on anything except free text data to select encounters more likely
 to have notes containing concepts of interest (e.g. 'substance abuse').  The reason for this is that
 we want to build up our dataset and pre-select notes more likely to have our concepts, which are

@@ -59,7 +59,7 @@ The general approach taken was as follows:
     and identify patients with increased probability of having notes with our concepts.  ICD9 codes were
     used as they were not used elsewhere in this analysis, and so may reduce the potential for an
     Ouroboros issue of the analysis output contributing to the input.  This classification task is 
-    described in the [ICD9-based encounter classification series]({static}/170102_icd9_notes_classifier.md).
+    described in the [ICD9-based encounter classification series]({filename}/170102_icd9_notes_classifier.md).
     Notes classifed with those algorithms as being likely positives were extracted, annotated, and
     added to our dataset.
     
