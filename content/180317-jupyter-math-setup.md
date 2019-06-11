@@ -6,12 +6,10 @@ Author: Eric Carlson
 slug: pelican-jupyter-update
 Series: pelican-website
 Status: published
-
-A reader recently pointed out that I hadn't actually tested math display 
-in Jupyter (Thanks Ben!).  Here are the steps I had to take to get 
-that working...
-
-<!-- PELICAN_END_SUMMARY -->
+Summary: 
+    A reader recently pointed out that I hadn't actually tested math display
+    in Jupyter (Thanks Ben!).  Here are the steps I had to take to get
+    that working... 
 
 [TOC]
 
